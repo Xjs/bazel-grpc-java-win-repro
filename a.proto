@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "b.proto";
+import "c.proto";
+
+package a;
+
+option java_multiple_files = false;
+option java_outer_classname = "As";
+option java_package = "com.github.Xjs.test";
+option go_package = "github.com/Xjs/test/a";
+
+
+service A {
+  rpc A (b.B) returns (c.C) {}
+}

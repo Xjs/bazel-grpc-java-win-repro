@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+// transitive imports needed for repro?
+
+package b;
+
+option java_multiple_files = false;
+option java_outer_classname = "Bs";
+option java_package = "com.github.Xjs.test";
+option go_package = "github.com/Xjs/test/b";
+
+
+message B {
+	string b = 1;
+}
